@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Debug - sephoto</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        .test-section {
+            margin: 20px 0;
+            padding: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .success { color: green; }
+        .error { color: red; }
+        .info { color: blue; }
+    </style>
+</head>
+<body>
+    <h1>Debug Page - French Site</h1>
+    
+    <div class="test-section">
+        <h2>CSS File Tests</h2>
+        <p>Testing CSS file loading:</p>
+        <ul>
+            <li><a href="/assets/css/fonts.css" target="_blank">/assets/css/fonts.css</a></li>
+            <li><a href="/assets/css/main.css" target="_blank">/assets/css/main.css</a></li>
+            <li><a href="/assets/css/portfolio.css" target="_blank">/assets/css/portfolio.css</a></li>
+        </ul>
+        <p class="info">Click links above to verify CSS files are accessible</p>
+    </div>
+    
+    <div class="test-section">
+        <h2>Image Path Tests</h2>
+        <p>Testing image paths:</p>
+        <ul>
+            <li><a href="/images/widen-1680-noupsize-1-1024x768-2545691991.jpg" target="_blank">Hero Image</a></li>
+            <li><a href="/images/portfolio/Family/Famille_Nov_2020_960x_1.jpg" target="_blank">Portfolio Image</a></li>
+        </ul>
+    </div>
+    
+    <div class="test-section">
+        <h2>JavaScript Tests</h2>
+        <p>Testing JS file loading:</p>
+        <ul>
+            <li><a href="/assets/js/portfolio.js" target="_blank">/assets/js/portfolio.js</a></li>
+            <li><a href="/assets/js/contact.js" target="_blank">/assets/js/contact.js</a></li>
+        </ul>
+    </div>
+    
+    <div class="test-section">
+        <h2>Current Page Info</h2>
+        <p><strong>Page URL:</strong> <span id="pageUrl"></span></p>
+        <p><strong>Base Path:</strong> <span id="basePath"></span></p>
+        <p><strong>CSS Loaded:</strong> <span id="cssLoaded">Checking...</span></p>
+    </div>
+    
+    <script>
+        document.getElementById('pageUrl').textContent = window.location.href;
+        document.getElementById('basePath').textContent = window.location.pathname;
+        
+        // Check if CSS is loaded
+        var sheets = document.styleSheets;
+        var cssLoaded = false;
+        for (var i = 0; i < sheets.length; i++) {
+            try {
+                if (sheets[i].href && sheets[i].href.includes('main.css')) {
+                    cssLoaded = true;
+                    break;
+                }
+            } catch(e) {}
+        }
+        
+        if (cssLoaded) {
+            document.getElementById('cssLoaded').textContent = 'YES';
+            document.getElementById('cssLoaded').className = 'success';
+        } else {
+            document.getElementById('cssLoaded').textContent = 'NO - CSS may not be loading';
+            document.getElementById('cssLoaded').className = 'error';
+        }
+    </script>
+</body>
+</html>
+
