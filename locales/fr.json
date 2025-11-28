@@ -1,0 +1,14 @@
+{
+  "meta": {
+    "title": "sephoto - Studio de Photographie",
+    "description": "Services de photographie professionnels"
+  },
+  "nav": {
+    "home": "Accueil",
+    "portfolio": "Portfolio",
+    "about": "À propos",
+    "services": "Services",
+    "contact": "Contact"
+  }
+}
+

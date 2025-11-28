@@ -1,0 +1,155 @@
+/**
+ * Portfolio Page Styles
+ * Mosaic layout for photography portfolio
+ */
+
+.portfolio-filters {
+    background: var(--color-bg-light);
+    padding: var(--spacing-lg) 0;
+    border-bottom: 1px solid var(--color-border);
+}
+
+.filter-buttons {
+    display: flex;
+    justify-content: center;
+    gap: var(--spacing-sm);
+    flex-wrap: wrap;
+}
+
+.filter-btn {
+    padding: 0.75rem 1.5rem;
+    background: white;
+    border: 2px solid var(--color-border);
+    border-radius: 25px;
+    font-family: var(--font-body);
+    font-size: var(--font-size-base);
+    font-weight: var(--font-weight-medium);
+    color: var(--color-text);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.filter-btn:hover {
+    border-color: var(--color-primary);
+    color: var(--color-primary);
+}
+
+.filter-btn.active {
+    background: var(--color-primary);
+    border-color: var(--color-primary);
+    color: white;
+}
+
+.portfolio-main {
+    padding: var(--spacing-2xl) 0;
+}
+
+.portfolio-mosaic {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    grid-auto-rows: 250px;
+    gap: 1.5rem;
+    grid-auto-flow: dense;
+}
+
+.portfolio-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px;
+    cursor: pointer;
+    background: var(--color-bg-light);
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.portfolio-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 24px rgba(0,0,0,0.2);
+}
+
+.portfolio-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.5s ease;
+}
+
+.portfolio-item:hover img {
+    transform: scale(1.1);
+}
+
+.portfolio-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(to bottom, transparent 0%, rgba(0,0,0,0.7) 100%);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: var(--spacing-md);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.portfolio-item:hover .portfolio-overlay {
+    opacity: 1;
+}
+
+.portfolio-overlay h3 {
+    color: white;
+    font-size: var(--font-size-lg);
+    font-weight: var(--font-weight-bold);
+    margin-bottom: var(--spacing-xs);
+}
+
+.portfolio-overlay p {
+    color: rgba(255,255,255,0.9);
+    font-size: var(--font-size-sm);
+}
+
+/* Mosaic Layout Variations */
+.portfolio-item-large {
+    grid-column: span 2;
+    grid-row: span 2;
+}
+
+.portfolio-item-wide {
+    grid-column: span 2;
+}
+
+.portfolio-item-tall {
+    grid-row: span 2;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .portfolio-mosaic {
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+        grid-auto-rows: 150px;
+        gap: 1rem;
+    }
+    
+    .portfolio-item-large,
+    .portfolio-item-wide {
+        grid-column: span 1;
+    }
+    
+    .portfolio-item-tall {
+        grid-row: span 1;
+    }
+}
+
+/* Portfolio item hidden state */
+.portfolio-item.hidden {
+    display: none;
+}
+
+/* Loading state */
+.portfolio-mosaic.loading {
+    opacity: 0.5;
+    pointer-events: none;
+}
+

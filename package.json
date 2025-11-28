@@ -1,0 +1,19 @@
+{
+  "name": "sephoto",
+  "version": "1.0.0",
+  "description": "Photography studio website",
+  "scripts": {
+    "dev": "echo 'Add your development server command here'",
+    "build": "echo 'Add your build command here'",
+    "deploy": "wrangler pages deploy"
+  },
+  "keywords": [
+    "photography",
+    "studio",
+    "website"
+  ],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {}
+}
+

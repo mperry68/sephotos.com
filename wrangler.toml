@@ -1,0 +1,9 @@
+# Cloudflare Pages configuration
+# This file is used for Cloudflare Workers/Pages deployment
+
+name = "sephoto"
+compatibility_date = "2024-01-01"
+
+[env.production]
+name = "sephoto"
+
