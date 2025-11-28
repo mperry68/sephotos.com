@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contactez-nous - sephoto | Réservez votre séance de photographie</title>
+    <meta name="description" content="Contactez le studio de photographie sephoto à Beaconsfield, QC. Réservez votre séance dès aujourd'hui.">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="../assets/css/fonts.css">
+    <link rel="stylesheet" href="../assets/css/main.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <a href="index.html">sephoto</a>
+                </div>
+                <nav class="main-nav">
+                    <ul>
+                        <li><a href="index.html">Accueil</a></li>
+                        <li><a href="portfolio.html">Portfolio</a></li>
+                        <li><a href="pricing.html">Tarifs</a></li>
+                        <li><a href="products.html">Produits</a></li>
+                        <li><a href="about.html">À propos</a></li>
+                        <li><a href="contact.html" class="active">Contact</a></li>
+                    </ul>
+                </nav>
+                <div class="header-actions">
+                    <a href="contact.html" class="btn btn-primary">Réserver une séance</a>
+                    <div class="language-switcher">
+                        <a href="../contact.html">EN</a>
+                        <span>|</span>
+                        <a href="contact.html" class="active">FR</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Contact Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1>Contactez-nous</h1>
+            <p>Contactez-nous pour réserver votre séance de photographie ou poser vos questions</p>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <main class="contact-main">
+        <div class="container">
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <h2>Restons en contact</h2>
+                    <p>Nous serions ravis de vous entendre. Contactez-nous pour planifier votre séance ou en savoir plus sur nos services.</p>
+                    
+                    <div class="contact-details">
+                        <div class="contact-card">
+                            <h3>Adresse</h3>
+                            <p>B7-186 Pl. Sutton<br>Beaconsfield, QC H9W 5S3</p>
+                        </div>
+                        <div class="contact-card">
+                            <h3>Téléphone</h3>
+                            <p><a href="tel:+15141234567">(514) 123-4567</a></p>
+                        </div>
+                        <div class="contact-card">
+                            <h3>Heures d'ouverture</h3>
+                            <p>Lundi - Vendredi : 9h00 - 18h00<br>Samedi : 10h00 - 16h00<br>Dimanche : Sur rendez-vous uniquement</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="contact-form-wrapper">
+                    <h2>Envoyez-nous un message</h2>
+                    <form class="contact-form" id="contactForm">
+                        <div class="form-group">
+                            <label for="name">Nom *</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Courriel *</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Téléphone</label>
+                            <input type="tel" id="phone" name="phone">
+                        </div>
+                        <div class="form-group">
+                            <label for="subject">Sujet</label>
+                            <select id="subject" name="subject">
+                                <option value="booking">Réserver une séance</option>
+                                <option value="pricing">Demande de tarifs</option>
+                                <option value="general">Question générale</option>
+                                <option value="other">Autre</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message *</label>
+                            <textarea id="message" name="message" rows="5" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-block">Envoyer le message</button>
+                    </form>
+                </div>
+            </div>
+
+            <!-- Google Map -->
+            <div class="map-section">
+                <h2>Nous trouver</h2>
+                <div class="map-container">
+                    <iframe 
+                        src="https://www.google.com/maps?q=B7-186+Pl.+Sutton,+Beaconsfield,+QC+H9W+5S3&output=embed" 
+                        width="100%" 
+                        height="450" 
+                        style="border:0;" 
+                        allowfullscreen="" 
+                        loading="lazy" 
+                        referrerpolicy="no-referrer-when-downgrade"
+                        title="Emplacement du studio sephoto - B7-186 Pl. Sutton, Beaconsfield, QC H9W 5S3">
+                    </iframe>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>sephoto</h3>
+                    <p>Studio de photographie professionnel à Beaconsfield, QC</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Liens rapides</h4>
+                    <ul>
+                        <li><a href="index.html">Accueil</a></li>
+                        <li><a href="portfolio.html">Portfolio</a></li>
+                        <li><a href="pricing.html">Tarifs</a></li>
+                        <li><a href="products.html">Produits</a></li>
+                        <li><a href="about.html">À propos</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact</h4>
+                    <p>B7-186 Pl. Sutton<br>Beaconsfield, QC H9W 5S3</p>
+                    <p><a href="tel:+15141234567">(514) 123-4567</a></p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 sephoto | Tous droits réservés</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../assets/js/contact.js"></script>
+</body>
+</html>
+
