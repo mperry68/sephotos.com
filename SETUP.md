@@ -10,7 +10,7 @@
    - Copy the iframe code and replace the one in `contact.html`
 
 2. **Update Contact Phone Number**
-   - Search for `(514) 123-4567` in all HTML files
+   - Search for `514-550-1399` in all HTML files
    - Replace with your actual phone number
 
 3. **Add Your Images**
